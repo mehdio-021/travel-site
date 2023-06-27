@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "Vazir";
+  src: url("../public/fonts/Vazir.eot");
+  src: url("../public/fonts/Vazir.eot?#iefix") format("embedded-opentype"),
+    url("../public/fonts/Vazir.woff2") format("woff2"),
+    url("../public/fonts/Vazir.woff") format("woff"),
+    url("../public/fonts/Vazir.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+html {
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Vazir";
+}
+body {
+  background: var(--bodyColor);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --secondaryColor: hsl(187, 85%, 43%);
+  --gradientColor: linear-gradient(
+    to right,
+    hsl(187, 85%, 43%),
+    hsl(199, 100%, 33%)
+  );
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --grayText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBG: rgb(225, 225, 235);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.section {
+  padding: 4rem 0 2rem;
+}
+.container {
+  padding: 0 1.5rem;
+}
+.icon {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.flex {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.grid {
+  display: grid;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.btn {
+  padding: 0.6rem 1.5rem;
+  background: var(--gradientColor);
+  border: none;
+  outline: none;
+  border-radius: 3rem;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btn a {
+  color: var(--whiteColor);
+  font-weight: 500;
+}
+.btn:hover {
+  background: var(--secondaryColor);
+}
+
+img,
+video {
+  width: 100%;
+  height: auto;
+}
+input {
+  font-size: 100%;
+}
+/* MEDIA QUERIES ==============> */
+@media screen and (min-width: 1240px) {
+  .container {
+    width: 80% !important;
+    margin: auto;
   }
-  to {
-    transform: rotate(360deg);
+  .section {
+    padding: 6rem 0 4rem;
+  }
+}
+@media screen and (min-width: 2560px){
+  body{
+    zoom: 1.7;
   }
 }
